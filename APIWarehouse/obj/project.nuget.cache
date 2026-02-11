@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "F2+5fW2eqxs=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kamilla\\RiderProjects\\Warehouse\\APIWarehouse\\APIWarehouse.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kamilla\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.12\\microsoft.aspnetcore.openapi.9.0.12.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\microsoft.openapi\\2.4.1\\microsoft.openapi.2.4.1.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\swashbuckle.aspnetcore\\10.1.2\\swashbuckle.aspnetcore.10.1.2.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\10.1.2\\swashbuckle.aspnetcore.swagger.10.1.2.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\10.1.2\\swashbuckle.aspnetcore.swaggergen.10.1.2.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\10.1.2\\swashbuckle.aspnetcore.swaggerui.10.1.2.nupkg.sha512",
+    "C:\\Users\\Kamilla\\.nuget\\packages\\system.text.json\\8.0.5\\system.text.json.8.0.5.nupkg.sha512"
+  ],
+  "logs": []
+}
