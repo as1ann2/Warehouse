@@ -71,3 +71,4 @@ C:\Users\Kamilla\RiderProjects\Warehouse\Warehouse\obj\Debug\net9.0\refint\Wareh
 C:\Users\Kamilla\RiderProjects\Warehouse\Warehouse\obj\Debug\net9.0\Warehouse.pdb
 C:\Users\Kamilla\RiderProjects\Warehouse\Warehouse\obj\Debug\net9.0\Warehouse.genruntimeconfig.cache
 C:\Users\Kamilla\RiderProjects\Warehouse\Warehouse\obj\Debug\net9.0\ref\Warehouse.dll
+C:\Users\Kamilla\RiderProjects\Warehouse\Warehouse\obj\Debug\net9.0\Warehouse.sourcelink.json

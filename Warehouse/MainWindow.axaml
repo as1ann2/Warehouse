@@ -1,51 +1,83 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Warehouse.MainWindow"
-        Title="Склад">
-    <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Top" HorizontalAlignment="Left">
+        Title="Склад" 
+        Width="900" 
+        Height="500"
+        x:CompileBindings="False">
 
-        <TextBox Width="200"
-                 Watermark="Название"
-                 Height="10"
-                 Margin="10, 15, 0, 0"/>
+    <Window.Resources>
+        <!-- СПИСОК -->
+        <DataTemplate x:Key="ListTemplate">
+            <Border BorderBrush="Gray" 
+                    BorderThickness="0,0,0,1" 
+                    Padding="5">
+                <TextBlock Text="{Binding NameAndQty}"/>
+            </Border>
+        </DataTemplate>
+        <!-- ПЛИТКА -->
+        <DataTemplate x:Key="GridTemplate">
+            <Border Background="LightGray" 
+                    CornerRadius="5" 
+                    Margin="5" 
+                    Width="100" 
+                    Height="80">
+                <TextBlock Text="{Binding NameAndQty}" 
+                           TextWrapping="Wrap" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"/>
+            </Border>
+        </DataTemplate>
+    </Window.Resources>
 
-        <TextBox Width="100"
-                 Height="10"
-                 Watermark="Количество"
-                 Margin="5, 15, 0, 0"/>
-        
-        <Button Content="Добавить"
-                Width="100"
-                Height="30"
-                Background="Green"
-                Foreground="White"
-                Margin="5, 15, 0, 0"/>
-        
-        <Button Content="Удалить"
-                Width="100"
-                Height="30"
-                Background="Red"
-                Foreground="White"
-                Margin="5, 15, 0, 0"/>
-        
-        <Button Content="Передать"
-                Width="100"
-                Height="30"
-                Background="CornflowerBlue"
-                Foreground="White"
-                Margin="5, 15, 0, 0"/>
-        
-        <Button Content="Переключить вид"
-                Width="150"
-                Height="30"
-                Background="SlateGray"
-                Foreground="White"
-                Margin="5, 15, 0, 0"/>
+    <Grid RowDefinitions="Auto, *">
+        <!-- ПАНЕЛЬ УПРАВЛЕНИ -->
+        <StackPanel Grid.Row="0" 
+                    Orientation="Horizontal" 
+                    Spacing="10" 
+                    Margin="10">
+            <TextBox x:Name="NameInput" 
+                     Width="200" 
+                     Watermark="Название"/>
+            <TextBox x:Name="QtyInput" 
+                     Width="100" 
+                     Watermark="Кол-во"/>
+            
+            <Button x:Name="AddButton" 
+                    Content="Добавить" 
+                    Background="Green" 
+                    Foreground="White" 
+                    Click="Add_Click"/>
+            <Button x:Name="DeleteButton" 
+                    Content="Удалить" 
+                    Background="Red" 
+                    Foreground="White" 
+                    Click="Delete_Click"/>
+            <Button x:Name="IssueButton" 
+                    Content="Отдать" 
+                    Background="CornflowerBlue" 
+                    Foreground="White" 
+                    Click="Issue_Click"/>
+            
+            <Separator Width="10"/>
+            
+            <Button x:Name="SwitchViewButton" 
+                    Content="Вид" 
+                    Background="SlateGray" 
+                    Foreground="White" 
+                    Click="SwitchView_Click"/>
+            <Button x:Name="ReportButton" 
+                    Content="Отчёты" 
+                    Click="Report_Click"/>
+        </StackPanel>
 
-    </StackPanel>
-
-    
+        <!-- ТОВАРЫ -->
+        <ListBox Grid.Row="1" x:Name="ProductsList" Margin="10">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+        </ListBox>
+    </Grid>
 </Window>
