@@ -6,6 +6,7 @@
         <entry key="Warehouse/App.axaml" value="Warehouse/Warehouse.csproj" />
         <entry key="Warehouse/GiveWindow.axaml" value="Warehouse/Warehouse.csproj" />
         <entry key="Warehouse/MainWindow.axaml" value="Warehouse/Warehouse.csproj" />
+        <entry key="Warehouse/MovementReportWindow.axaml" value="Warehouse/Warehouse.csproj" />
       </map>
     </option>
   </component>

@@ -33,7 +33,7 @@ namespace Warehouse
                 _productsList.ItemTemplate = this.FindResource(_currentTemplate) as IDataTemplate;
             }
 
-            _ = LoadProductsFromApi(); // загрузка при старте
+            _ = LoadProductsFromApi();
         }
 
         private void InitializeComponent() => AvaloniaXamlLoader.Load(this);
@@ -164,8 +164,17 @@ namespace Warehouse
                 await ShowMessage("Внимание", "Выберите товар для выдачи.");
                 return;
             }
+
+            var issueWindow = new GiveWindow(
+                productId: selectedItem.Id,
+                productName: selectedItem.Name,
+                currentQuantity: selectedItem.Quantity
+            );
+
+            await issueWindow.ShowDialog(this);
+
+            await LoadProductsFromApi();
         }
-      
         private async Task<bool> ShowConfirmDialog(string message)
         {
             var tcs = new TaskCompletionSource<bool>();

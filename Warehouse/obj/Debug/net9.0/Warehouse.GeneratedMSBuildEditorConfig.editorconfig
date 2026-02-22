@@ -26,5 +26,8 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/Kamilla/RiderProjects/Warehouse/Warehouse/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/Kamilla/RiderProjects/Warehouse/Warehouse/GiveWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/Kamilla/RiderProjects/Warehouse/Warehouse/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

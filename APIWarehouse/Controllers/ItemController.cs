@@ -34,6 +34,27 @@ namespace APIWarehouse.Controllers
                 return StatusCode(500, $"Ошибка при получении данных: {ex.Message}");
             }
         }
+        
+        [HttpPost("{id}/give")]
+        public async Task<IActionResult> GiveProduct(int id, [FromBody] int quantity)
+        {
+            if (quantity <= 0)
+                return BadRequest("Количество должно быть больше 0");
+
+            var product = await _context.Warehouses.FindAsync(id);
+
+            if (product == null)
+                return NotFound("Товар не найден");
+
+            if (product.Quantity < quantity)
+                return BadRequest($"Недостаточно товара. В наличии: {product.Quantity}");
+
+            product.Quantity -= quantity;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(product);
+        }
 
         // Добавить новый товар
         [HttpPost]

@@ -1,0 +1,38 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Warehouse.GiveWindow"
+        Title="Отдать предмет" 
+        Width="350" 
+        Height="240"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False">
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBox Name="ItemNameTextBox" 
+                 IsReadOnly="True"
+                 Background="#F0F0F0"/>
+        
+        <TextBox Name="ReceiverTextBox" 
+                 Watermark="Кому передаем"/>
+        
+        <TextBox Name="QuantityTextBox" 
+                 Watermark="Количество" 
+                 Text="1"/>
+        
+        <TextBlock Name="InfoTextBlock" 
+                   Foreground="Gray"/>
+        
+        <StackPanel Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    Spacing="10">
+            <Button Name="GiveButton" 
+                    Content="Отдать" 
+                    Click="GiveButton_Click" 
+                    Width="80"/>
+            <Button Name="CancelButton" 
+                    Content="Отмена" 
+                    Click="CancelButton_Click" 
+                    Width="80"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
